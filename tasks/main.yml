@@ -16,5 +16,5 @@
 
 - name: Install vscode extensions
   shell: code --install-extension {{ item }}
-  with_items: "{{ vs_code_extensions | default([]) }}"
+  with_items: "{{ vscode_extensions | default([]) }}"
   when: item not in installed_extensions.stdout_lines
